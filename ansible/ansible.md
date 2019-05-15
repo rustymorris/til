@@ -4,20 +4,19 @@ class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img sr
 
 Installed Ansible to virtualenv 
 
-**ansible.cfg**
+
 
     `pip install ansible`
 
 
+**ansible.cfg**
 
 The Ansible configuration file is /etc/ansible/ansible.cfg
 
 It can be edited at a global level or maintained at a playbook level
 config file. Use a playbook level config file. 
 
-Three recommended config changes. 
-
-**ansible.cfg**
+Recommended config changes.
 ```
     gathering = explicit # runs the setup module on the host, disable for network oriented playbooks
     inventory = inv.yml  # inventory file, default is hosts with no extension
@@ -31,14 +30,12 @@ The config file search order:
 -   `~/.ansible.cfg`<span> </span>(in the home directory)
 -   `/etc/ansible/ansible.cfg`
 
-<span style="color: rgb(64,64,64);">Ansible will process the above list
-and use the first file found, all others are ignored.</span>
+Ansible will process the above list
+and use the first file found, all others are ignored.
 
 
+**inv.yml**
 
-inv.yml
-
-**ansible.cfg**
 
     ---
     all:
@@ -62,7 +59,7 @@ variables - create a directory named group\_vars
 
 files routers.yml
 
-"username and password needs moved out of code of course"
+"username and password needs moved out of the code"
 
 **routers.yml**
 
