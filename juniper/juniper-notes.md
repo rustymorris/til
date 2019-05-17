@@ -19,19 +19,22 @@ user@host#
 
 Set the root password
 
-`'set system root-authentication plain-text-password`
+`user@host# set system root-authentication plain-text-password`
 
 Disable auto-image-upgrade
 
-`delete chassis auto-image-upgrade`
+`user@host# delete chassis auto-image-upgrade`
 
+Show configuration in operational mode
+
+`user@host> show configuration | display set`
 
 
 
 Restore factory defaults
 
-` $ load factory-default`
+`user@host# load factory-default`
 
-Gracefully shutdown
+Gracefully shutdown in operational mode
 
-`request system halt`
+`user@host> request system halt`
