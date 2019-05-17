@@ -48,3 +48,17 @@ index=web sourcetype=access* status=200 product_name=*
 | fields JSESSIONId, product_name, price
 | rename JSESSIONID as "User Session"
 ```
+Remove duplicate results
+```
+index=security sourcetype=history*
+Address_Description="San Francisco"
+|dedup Username
+| table Username First_Name Last_Name
+'''
+
+Sort command
+'''
+sourcetype=vendor_sales
+|table Vendor product-name sale_price
+|sort -sale_price Vendor
+'''
