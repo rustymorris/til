@@ -25,7 +25,7 @@ Disable auto-image-upgrade
 
 `user@host# delete chassis auto-image-upgrade`
 
-Show configuration in operational mode
+Show configuration
 
 `user@host> show configuration | display set`
 
